@@ -3,7 +3,7 @@
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 > A curated list of awesome C# frameworks, libraries, tools, and resources.  
-> Inspired by [awesome-dotnet](https://github.com/quozd/awesome-dotnet) but more focused, modern, and developer-friendly.
+> Focused on modern, durable, and developer-friendly standards for enterprise and high-quality software engineering.
 
 ---
 
@@ -12,11 +12,13 @@
 - [Language and Standards](#language-and-standards)
 - [Development Environments](#development-environments)
 - [Tools](#tools)
+- [Architecture & Patterns](#architecture--patterns)
 - [Libraries](#libraries)
-  - [Web](#web)
+  - [Web & API](#web--api)
+  - [Observability & Telemetry](#observability--telemetry)
   - [Command Line](#command-line)
   - [Testing](#testing)
-  - [Interoperability & ORM](#interoperability--orm)
+  - [Data & ORM](#data--orm)
   - [Security](#security)
   - [Game Development](#game-development)
 - [AI and Machine Learning](#ai-and-machine-learning)
@@ -42,7 +44,6 @@
 - [Visual Studio](https://visualstudio.microsoft.com/)
 - [JetBrains Rider](https://www.jetbrains.com/rider/)
 - [Visual Studio Code](https://code.visualstudio.com/) with the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit)
-- [OmniSharp](https://github.com/OmniSharp/omnisharp-roslyn) – Cross-platform .NET development powered by Roslyn.
 
 ---
 
@@ -50,21 +51,33 @@
 
 - [dotnet CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/)
 - [NuGet](https://www.nuget.org/)
-- [Refit](https://github.com/reactiveui/refit) – Type-safe REST API calls
 - [Cake](https://cakebuild.net/) – Build automation
 - [dotnet-script](https://github.com/dotnet-script/dotnet-script) – C# scripting with .NET
 - [LINQPad](https://www.linqpad.net/) – Interactive .NET Scratchpad
-- [PostSharp](https://www.postsharp.net/) – Aspect-oriented programming for .NET
+
+---
+
+## Architecture & Patterns
+
+- [MediatR](https://github.com/jbogard/MediatR) – In-process messaging (Mediator pattern)
+- [MassTransit](https://masstransit.io/) – Distributed application framework and message bus
+- [Polly](https://github.com/App-vNext/Polly) – Resilience and transient-fault-handling library
+- [YARP (Yet Another Reverse Proxy)](https://microsoft.github.io/reverse-proxy/) – A highly customizable reverse proxy
 
 ---
 
 ## Libraries
 
-### Web
+### Web & API
 
 - [ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/)
 - [Blazor](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor)
 - [SignalR](https://dotnet.microsoft.com/en-us/apps/aspnet/signalr)
+- [Refit](https://github.com/reactiveui/refit) – Type-safe REST API clients
+
+### Observability & Telemetry
+
+- [OpenTelemetry .NET](https://opentelemetry.io/docs/languages/net/) – Standard for distributed tracing and metrics
 - [Serilog](https://serilog.net/) – Structured logging for C#
 
 ### Command Line
@@ -77,26 +90,27 @@
 
 - [xUnit](https://xunit.net/)
 - [NUnit](https://nunit.org/)
-- [Moq](https://github.com/moq/moq)
+- [NSubstitute](https://nsubstitute.github.io/) – A friendly substitute for .NET mocking libraries
 - [FluentAssertions](https://fluentassertions.com/)
-- [ApprovalTests](https://github.com/approvals/ApprovalTests.Net) – Verification testing
+- [Testcontainers for .NET](https://dotnet.testcontainers.org/) – Throwaway instances of Docker containers for integration testing
+- [Playwright for .NET](https://playwright.dev/dotnet/) – Reliable end-to-end testing for modern web apps
+- [Bogus](https://github.com/bchavez/Bogus) – Simple and sane fake data generator
 
-### Interoperability & ORM
+### Data & ORM
 
-- [Dapper](https://github.com/DapperLib/Dapper)
 - [Entity Framework Core](https://learn.microsoft.com/en-us/ef/core/)
+- [Dapper](https://github.com/DapperLib/Dapper) – High-performance Micro-ORM
 - [AutoMapper](https://automapper.org/)
-- [MediatR](https://github.com/jbogard/MediatR) – In-process messaging
 
 ### Security
 
+- [OpenIddict](https://github.com/openiddict/openiddict-core) – Versatile OpenID Connect/OAuth 2.0 server framework
 - [BCrypt.Net](https://github.com/BcryptNet/bcrypt.net)
-- [IdentityServer](https://github.com/DuendeSoftware/IdentityServer)
 - [AspNetCore.Authentication.JwtBearer](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer/)
-- [OWASP Dependency-Check](https://owasp.org/www-project-dependency-check/) – Vulnerability scanning
 
 ### Game Development
 
+- [Godot](https://godotengine.org/) – Open-source engine with first-class C# support
 - [Unity](https://unity.com/) – Popular game engine using C#
 - [MonoGame](https://www.monogame.net/) – Cross-platform game development
 - [Stride](https://stride3d.net/) – Open-source game engine for .NET
@@ -105,8 +119,8 @@
 
 ## AI and Machine Learning
 
+- [Semantic Kernel](https://github.com/microsoft/semantic-kernel) – SDK to integrate LLMs with C# applications
 - [ML.NET](https://dotnet.microsoft.com/en-us/apps/machinelearning-ai/ml-dotnet) – Machine learning framework for .NET
-- [Accord.NET](https://github.com/accord-net/framework) – Machine learning and scientific computing
 - [TorchSharp](https://github.com/dotnet/TorchSharp) – PyTorch for .NET
 - [SciSharp Stack](https://scisharp.github.io/SciSharp/) – Ecosystem for scientific and numerical computing
 
@@ -117,17 +131,15 @@
 - [Clean Architecture by Jason Taylor](https://github.com/jasontaylordev/CleanArchitecture)
 - [C# Coding Guidelines (JetBrains)](https://github.com/JetBrains/Guidelines)
 - [Framework Design Guidelines (Microsoft)](https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/)
-- [SOLID Principles](https://en.wikipedia.org/wiki/SOLID)
 
 ---
 
 ## Books and Tutorials
 
+- _C# 12 in a Nutshell_ – Joseph Albahari
 - _C# in Depth_ – Jon Skeet
-- _Pro C# 9 with .NET 5_ – Andrew Troelsen and Philip Japikse
-- _The Pragmatic Programmer_ – Andrew Hunt and David Thomas
+- _Software Architecture: The Hard Parts_ – Neal Ford et al.
 - [Microsoft Learn - C#](https://learn.microsoft.com/en-us/training/paths/csharp-first-steps/)
-- [Pluralsight .NET Courses](https://www.pluralsight.com/paths/dotnet)
 
 ---
 
@@ -136,16 +148,13 @@
 - [Reddit /r/dotnet](https://www.reddit.com/r/dotnet/)
 - [Stack Overflow - C# tag](https://stackoverflow.com/questions/tagged/c%23)
 - [Discord - .NET Foundation](https://discord.com/invite/dotnet)
-- [Weekly Dev Tips Podcast](https://www.weeklydevtips.com/)
 
 ---
 
 ## Example Projects / Boilerplates
 
-- [eShopOnWeb (Microsoft reference app)](https://github.com/dotnet-architecture/eShopOnWeb)
+- [eShop (Microsoft reference app)](https://github.com/dotnet/eShop) – Modernized reference architecture
 - [Clean Architecture Template](https://github.com/jasontaylordev/CleanArchitecture)
-- [BlazorHero](https://github.com/blazorhero/CleanArchitecture) – Fullstack Clean Architecture with Blazor
-- [Reactive Trader](https://github.com/AdaptiveConsulting/ReactiveTraderCloud) – Real-time trading platform demo
 
 ---
 
@@ -154,7 +163,6 @@
 - [Sharplab.io](https://sharplab.io/) – .NET IL and JIT explorer
 - [Roslyn Compiler](https://github.com/dotnet/roslyn)
 - [dotnet/interactive](https://github.com/dotnet/interactive) – Notebooks for .NET
-- [Try .NET](https://dotnet.microsoft.com/en-us/learn/try-dotnet) – Interactive learning
 
 ---
 
